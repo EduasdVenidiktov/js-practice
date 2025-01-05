@@ -293,3 +293,51 @@ button:hover {
   border-radius: 8px;
   background: #f6f6fe;
 }
+
+/* ======================= task 7 =========================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Додано тінь для таблиці */
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px; /* Збільшено відступи */
+  text-align: center; /* Вирівнювання чисел по правому краю */
+  font-size: 26px;
+}
+
+th {
+  background-color: #d7d5d5; /* Змінено колір фону заголовків */
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center; /* Центрування тексту в заголовках */
+}
+
+#totalCompensation {
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+  color: #2756d7;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Додано відступ знизу */
+  margin-top: 60px; /* Додано відступ знизу */
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+#dateHeader,
+#tableBody td:nth-child(2) {
+  /* Стиль для ячеек даты */
+  text-align: center; /* Центрирование текста */
+}

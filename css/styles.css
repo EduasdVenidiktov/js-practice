@@ -28,7 +28,7 @@ body {
   padding: 0;
   justify-content: center;
   color: white;
-  min-height: 100vh;
+  max-height: 60vh;
 }
 h1,
 h2,

@@ -25,7 +25,7 @@ body {
     -apple-system,
     sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   justify-content: center;
   color: white;
   max-height: 60vh;
@@ -46,7 +46,7 @@ h4 {
 /* Контейнер-смартфон */
 #pageBody {
   width: 100%;
-  max-width: 430px; /* Ширина сучасного iPhone Pro Max */
+  /* max-width: 430px; Ширина сучасного iPhone Pro Max */
   padding: 20px;
   position: relative;
   overflow-x: hidden; /* Щоб бігуча стрічка не створювала скрол */

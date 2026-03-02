@@ -1,3 +1,9 @@
+// Запуск при клике в любом месте экрана
+document.addEventListener("click", function () {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  }
+});
 
 // 3. ЗАПУСК ТА ЛОГІКА СТРІЧКИ
 const runningLine = document.getElementById("running-line");

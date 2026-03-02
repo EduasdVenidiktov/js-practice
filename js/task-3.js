@@ -1,8 +1,17 @@
-// Запуск при клике в любом месте экрана
-document.addEventListener("click", function () {
-  if (document.documentElement.requestFullscreen) {
-    document.documentElement.requestFullscreen();
-  }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .catch((err) => console.log("SW registration failed:", err));
+  });
+}
+
+self.addEventListener("install", () => {
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", () => {
+  self.clients.claim();
 });
 
 // 3. ЗАПУСК ТА ЛОГІКА СТРІЧКИ

@@ -1,23 +1,20 @@
 {
   "name": "Резерв ID",
   "short_name": "Резерв",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
-  "display_override": ["standalone", "fullscreen"],
-  "scope": "/",
   "background_color": "#e3e2d5",
-  "theme_color": "#9e2a2b",
-  "description": "Перегляд даних військовозобов'язаного",
-  "orientation": "portrait-primary",
+  "theme_color": "#e3e2d5",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "https://via.placeholder.com/192.png?text=192",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "icon-512.png",
+      "src": "https://via.placeholder.com/512.png?text=512",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

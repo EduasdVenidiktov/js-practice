@@ -5,20 +5,16 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: #e3e2d5 url("../Photo/1.png") center/cover no-repeat fixed;
-  touch-action: manipulation; /* прибирає масштабування */
 }
 
-/* Щоб контент заповнював весь екран без смуг */
-.container {
-  /* або твій головний блок */
-  height: 100dvh; /* dynamic viewport height — найнадійніше в 2025–2026 */
-  width: 100%;
-  position: relative;
-}
+body {
+  background-image: url("../Photo/1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #e3e2d5;
 
-/* Якщо хочеш імітувати статус-бар */
-:root {
-  --safe-area-top: env(safe-area-inset-top);
-  --safe-area-bottom: env(safe-area-inset-bottom);
+  /* Очень важно для полноэкранности на современных Android */
+  min-height: 100dvh; /* dynamic viewport height */
 }

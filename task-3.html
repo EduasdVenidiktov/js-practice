@@ -4,25 +4,16 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
 
-    <!-- Важливо для PWA -->
-    <meta name="theme-color" content="#9e2a2b" />
-    <!-- колір статус-бару -->
-    <meta name="background-color" content="#e3e2d5" />
-    <!-- колір сплеш-екрана -->
-    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Обязательно для PWA / standalone-режима -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Поддержка iOS / Safari (опционально, но полезно) -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-    <!-- Маніфест -->
-    <link rel="manifest" href="/manifest.json" />
-
-    <link rel="icon" href="/icon-192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/icon-192.png" />
-
-    <title>Резерв ID</title>
     <link rel="stylesheet" href="css/task-3.css" />
   </head>
   <body>

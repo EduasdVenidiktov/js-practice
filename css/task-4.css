@@ -15,11 +15,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  /* 2. Сдвигаем фото вверх. 
-       -160px — это примерная высота адресной строки Google Chrome на S21.
-       Поднимаем картинку так, чтобы кнопка "Сповіщення" была в самом верху. */
-  background-position: center -160px;
-
   /* Найсучасніший спосіб 2025–2026 */
   height: 100dvh;
   min-height: 100dvh;

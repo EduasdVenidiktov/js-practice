@@ -13,7 +13,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
 
   /* Найсучасніший спосіб 2025–2026 */
   height: 100dvh;
@@ -41,7 +41,7 @@ main,
   background-color: #704d1b; /* Точний колір як на скриншоті */
   overflow: hidden;
   white-space: nowrap;
-  margin: 426px 24px 40px; /* Розтягуємо на всю ширину картки */
+  margin: 454px 24px 40px; /* Розтягуємо на всю ширину картки */
   display: flex;
   align-items: center;
 }

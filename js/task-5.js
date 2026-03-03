@@ -65,7 +65,6 @@ window.addEventListener("beforeinstallprompt", (e) => {
   console.log("Install prompt ready");
 
   // Тут можна показати свою кнопку "Встановити додаток"
-  // Наприклад: document.getElementById('installBtn').style.display = 'block';
 });
 
 function installPWA() {

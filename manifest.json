@@ -1,9 +1,9 @@
 {
-  "name": "JS Practice",
-  "short_name": "JSApp",
+  "name": "Резерв +",
+  "short_name": "Резерв +",
   "description": "Практика JavaScript з годинником та стрічкою оновлень",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "./task-5.html",
+  "scope": "./task-5.html",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "background_color": "#ffffff",

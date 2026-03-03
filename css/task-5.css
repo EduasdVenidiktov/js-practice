@@ -48,8 +48,8 @@ main,
 
 /* Стиль самого тексту */
 #running-line {
-  display: inline-block;
-  color: #ffffff;
+  display: fixed; 
+    color: #ffffff;
   font-family: "e-Ukraine", "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;

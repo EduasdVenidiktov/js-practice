@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   overscroll-behavior: none; /* блокує "пружинний" скрол за межі */
 }
 
@@ -13,7 +13,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 
   /* Найсучасніший спосіб 2025–2026 */
   height: 100dvh;

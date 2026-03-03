@@ -39,7 +39,7 @@ main,
 /* Контейнер, який обрізає текст і задає фон */
 .marquee-viewport {
   background-color: #704d1b; /* Точний колір як на скриншоті */
-  overflow: hidden;
+  /* overflow: hidden; */
   white-space: nowrap;
   margin: 426px 24px 40px; /* Розтягуємо на всю ширину картки */
   display: flex;

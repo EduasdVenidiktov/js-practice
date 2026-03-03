@@ -25,8 +25,6 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
-
-  user-select: none;
 }
 
 /* Якщо хочеш, щоб контент теж ігнорував safe-area (екстремальний варіант) */
@@ -43,9 +41,10 @@ main,
   background-color: #704d1b; /* Точний колір як на скриншоті */
   overflow: hidden;
   white-space: nowrap;
-  margin: 460px 24px 40px; /* Розтягуємо на всю ширину картки */
+  margin: 464px 24px 40px; /* Розтягуємо на всю ширину картки */
   display: flex;
   align-items: center;
+  user-select: none;
 }
 
 /* Стиль самого тексту */

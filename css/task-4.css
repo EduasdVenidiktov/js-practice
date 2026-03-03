@@ -1,0 +1,73 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overscroll-behavior: none; /* блокує "пружинний" скрол за межі */
+}
+
+body {
+  background: #ffffff; /* ← основний фон БІЛИЙ */
+  background-image: url("../Photo/3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* Бежевий тільки зверху – імітація під status bar */
+  background: linear-gradient(
+    to bottom,
+    #e3e2d5 0%,
+    #e3e2d5 env(safe-area-inset-top),
+    #ffffff env(safe-area-inset-top) 100%
+  );
+
+  min-height: 100dvh;
+  height: 100dvh;
+}
+
+/* Якщо хочеш, щоб контент теж ігнорував safe-area (екстремальний варіант) */
+main,
+.card-container {
+  /* або твій головний контейнер */
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Контейнер, який обрізає текст і задає фон */
+.marquee-viewport {
+  background-color: #704d1b; /* Точний колір як на скриншоті */
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 426px 24px 40px; /* Розтягуємо на всю ширину картки */
+  display: flex;
+  align-items: center;
+}
+
+/* Стиль самого тексту */
+#running-line {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "e-Ukraine", "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none; /* В оригіналі звичайний регістр */
+  padding-left: 100%;
+  margin: 6px;
+
+  /* Анімація: 18 секунд для плавності */
+  animation: marquee 460s linear infinite;
+}
+
+/* Опис руху */
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

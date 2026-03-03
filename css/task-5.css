@@ -48,13 +48,13 @@ main,
 
 /* Стиль самого тексту */
 #running-line {
-  display: fixed; 
-    color: #ffffff;
+  display: fixed;
+  color: #ffffff;
   font-family: "e-Ukraine", "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
   text-transform: none; /* В оригіналі звичайний регістр */
-  padding-left: 100%;
+  /* padding-left: 100%; */
   margin: 6px;
 
   /* Анімація: 18 секунд для плавності */
@@ -62,11 +62,20 @@ main,
 }
 
 /* Опис руху */
-@keyframes marquee {
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* @keyframes marquee {
   0% {
     transform: translate(0, 0);
   }
   100% {
     transform: translate(-100%, 0);
   }
-}
+} */

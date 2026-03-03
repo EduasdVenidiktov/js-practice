@@ -18,18 +18,11 @@
     <meta name="theme-color" content="#e3e2d5" />
     <!-- <meta name="theme-color" content="#fff" /> -->
 
-    <link rel="manifest" href="./maniftst-5.json" />
+    <link rel="manifest" href="./manifest-5.json" />
 
     <link rel="stylesheet" href="css/task-5.css" />
   </head>
 
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/js-practice/sw.js")
-        .then(() => console.log("SW registered"));
-    }
-  </script>
   <body>
     <div class="marquee-viewport">
       <p id="running-line">

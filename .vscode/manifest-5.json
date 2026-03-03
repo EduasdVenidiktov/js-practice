@@ -1,10 +1,14 @@
 {
   "name": "JS Practice",
   "short_name": "JSApp",
-  "start_url": "/js-practice/",
+  // "start_url": "/js-practice/",
+
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
+
+  "scope": "./", // ← додай це поле
   "icons": [
     {
       "src": "icon-192.png",

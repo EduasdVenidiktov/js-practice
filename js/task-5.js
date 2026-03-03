@@ -54,3 +54,30 @@ if (runningLine) {
 // Запускаємо годинник
 updateClock();
 setInterval(updateClock, 1000);
+
+// Для кастомного install-промпту (Android/Chrome)
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  // Запобігаємо показу стандартного промпту
+  e.preventDefault();
+  deferredPrompt = e;
+  console.log("Install prompt ready");
+
+  // Тут можна показати свою кнопку "Встановити додаток"
+  // Наприклад: document.getElementById('installBtn').style.display = 'block';
+});
+
+function installPWA() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted install");
+      }
+      deferredPrompt = null;
+    });
+  }
+}
+
+document.getElementById("installBtn")?.addEventListener("click", installPWA);

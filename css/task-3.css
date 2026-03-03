@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background-image: url("../Photo/1.png");
+  background-image: url("../Photo/3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,4 +35,39 @@ main,
   height: 100dvh;
   margin: 0;
   padding: 0;
+}
+
+/* Контейнер, який обрізає текст і задає фон */
+.marquee-viewport {
+  background-color: #704d1b; /* Точний колір як на скриншоті */
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 526px 26px 40px; /* Розтягуємо на всю ширину картки */
+  display: flex;
+  align-items: center;
+}
+
+/* Стиль самого тексту */
+#running-line {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "e-Ukraine", "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none; /* В оригіналі звичайний регістр */
+  padding-left: 100%;
+  margin: 6px;
+
+  /* Анімація: 18 секунд для плавності */
+  animation: marquee 460s linear infinite;
+}
+
+/* Опис руху */
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }

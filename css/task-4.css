@@ -9,23 +9,23 @@ body {
 }
 
 body {
-  background: #ffffff; /* ← основний фон БІЛИЙ */
   background-image: url("../Photo/3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  /* background-color: #e3e2d5; */
 
-  /* Бежевий тільки зверху – імітація під status bar */
-  background: linear-gradient(
-    to bottom,
-    #e3e2d5 0%,
-    #e3e2d5 env(safe-area-inset-top),
-    #ffffff env(safe-area-inset-top) 100%
-  );
-
-  min-height: 100dvh;
+  /* Найсучасніший спосіб 2025–2026 */
   height: 100dvh;
+  min-height: 100dvh;
+  max-height: 100dvh;
+
+  /* Додатково прибираємо будь-які відступи від safe-area */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 /* Якщо хочеш, щоб контент теж ігнорував safe-area (екстремальний варіант) */

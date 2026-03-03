@@ -49,7 +49,7 @@ main,
 
 /* Стиль самого тексту */
 #running-line {
-  display: fixed;
+  display: inline-block;
   color: #ffffff;
   font-family: "e-Ukraine", "Inter", sans-serif;
   font-size: 14px;

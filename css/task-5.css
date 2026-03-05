@@ -41,7 +41,7 @@ main,
   background-color: #704d1b; /* Точний колір як на скриншоті */
   overflow: hidden;
   white-space: nowrap;
-  margin: 450px 24px 40px; /* Розтягуємо на всю ширину картки */
+  margin: 448px 24px 40px; /* Розтягуємо на всю ширину картки */
   display: flex;
   align-items: center;
 }
@@ -57,6 +57,7 @@ main,
   padding-left: 100%;
   margin: 6px;
 
+  transform: translate3d(0, 0, 0); /* GPU-ускорення + стабілізація */
   /* Анімація: 18 секунд для плавності */
   animation: marquee 460s linear infinite;
 }

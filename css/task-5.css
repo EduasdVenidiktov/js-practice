@@ -44,7 +44,6 @@ main,
   margin: 468px 24px 40px; /* Розтягуємо на всю ширину картки */
   display: flex;
   align-items: center;
-  user-select: none;
 }
 
 /* Стиль самого тексту */
@@ -64,7 +63,7 @@ main,
 
 /* Опис руху */
 
-@keyframes scroll-left {
+@keyframes marquee {
   from {
     transform: translateX(0);
   }

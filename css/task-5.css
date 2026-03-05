@@ -45,11 +45,6 @@ main,
   display: flex;
   align-items: center;
   user-select: none;
-
-  /* ФИКСАЦИЯ: */
-  user-select: none; /* Запрет выделения текста */
-  touch-action: none; /* Запрет любых жестов (прокрутки, перетаскивания) */
-  pointer-events: none; /* Игнорировать клики/зажатия (строка станет "прозрачной" для пальца) */
 }
 
 /* Стиль самого тексту */

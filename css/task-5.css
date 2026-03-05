@@ -45,16 +45,6 @@ main,
   display: flex;
   align-items: center;
   user-select: none;
-
-  /* ФИКСАЦИЯ: */
-  user-select: none; /* Запрет выделения текста */
-  -webkit-user-select: none; /* Для Safari/Chrome на iOS/Android */
-  touch-action: none; /* Запрет любых жестов (прокрутки, перетаскивания) */
-  pointer-events: none; /* Игнорировать клики/зажатия (строка станет "прозрачной" для пальца) */
-
-  /* Гарантия фиксации, если вы используете абсолютное позиционирование */
-  position: relative;
-  z-index: 10;
 }
 
 /* Стиль самого тексту */

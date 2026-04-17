@@ -21,38 +21,49 @@
     <link rel="stylesheet" href="css/task-6.css" />
   </head>
 
-  <body>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-image: url(&quot;../Photo/refresh-window.jpg&quot;);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100dvh;
+      width: 100vw;
+      overflow: hidden;
+    "
+  >
     <div class="refresh-window">
-      <!-- <a href="index.html">
+      <a href="/task-6.html">
         <img
-          src="./Photo/back-icon.png"
+          src="../Photo/back-icon.png"
           alt="Назад"
           style="
             width: 32px;
             height: 32px;
             position: absolute;
-            top: 16px;
-            left: 16px;
+            top: 36px;
+            left: 18px;
           "
         />
-      </a> -->
-
-      <a
-        href="/Pages/page-alert.html"
-        style="position: fixed; top: 70px; left: 242px; z-index: 1000"
-      >
-        <img src="./Photo/button-bell.png" alt="Сповіщення" />
       </a>
+
+      <img
+        href="../Photo/refresh-window.jpg"
+        style="position: fixed; top: 70px; left: 242px; z-index: 1000"
+      />
+      <!-- <img src="../Photo/button-bell.png" alt="Сповіщення" /> -->
     </div>
 
-    <div class="marquee-viewport">
+    <!-- <div class="marquee-viewport">
       <p id="running-line">
         Документ оновлено о 21:53 | 24.02.2026 • Документ оновлено о 22:53 |
         24.02.2026 •
       </p>
-    </div>
+    </div> -->
 
-    <button
+    <!-- <button
       id="installBtn"
       style="
         display: none;
@@ -67,7 +78,7 @@
       "
     >
       Встановити додаток
-    </button>
+    </button> -->
 
     <script src="./js/task-6.js" type="module"></script>
   </body>

@@ -16,17 +16,49 @@
 
     <meta name="theme-color" content="#e3e2d5" />
 
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="manifest.json" />
 
     <link rel="stylesheet" href="css/task-6.css" />
   </head>
 
   <body>
+    <div class="refresh-window">
+      <!-- <a href="index.html">
+        <img
+          src="./Photo/back-icon.png"
+          alt="Назад"
+          style="
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+          "
+        />
+      </a> -->
+
+      <a
+        href="Pages/page-alert.html"
+        style="position: fixed; top: 70px; left: 242px; z-index: 1000"
+      >
+        <img src="Photo/button-bell.png" alt="Сповіщення" />
+      </a>
+    </div>
+
     <div class="marquee-viewport">
       <p id="running-line">
         Документ оновлено о 21:53 | 24.02.2026 • Документ оновлено о 22:53 |
         24.02.2026 •
       </p>
+    </div>
+
+    <div class="plus-window">
+      <a
+        href="Pages/page-plus.html"
+        style="position: fixed; bottom: 210px; right: 36px; z-index: 1000"
+      >
+        <img src="Photo/plus.png" alt="Plus" />
+      </a>
     </div>
 
     <button
@@ -46,6 +78,6 @@
       Встановити додаток
     </button>
 
-    <script src="./js/task-6.js" type="module"></script>
+    <script src="js/task-6.js" type="module"></script>
   </body>
 </html>

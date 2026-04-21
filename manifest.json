@@ -2,25 +2,37 @@
   "name": "Резерв +",
   "short_name": "Резерв +",
   "description": "Практика JavaScript з годинником та стрічкою оновлень",
-  "start_url": "./task-5.html",
-  "scope": "./task-5.html",
+  "start_url": "task-7.html",
+  "scope": "./",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
-  "background_color": "#ffffff",
+  "display_override": ["standalone", "fullscreen", "minimal-ui"],
+  "background_color": "#e3e2d5",
   "theme_color": "#e3e2d5",
-  "orientation": "portrait-primary",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "./icon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "./icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

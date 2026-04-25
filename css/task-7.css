@@ -1,73 +1,100 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-  overscroll-behavior: none; /* блокує "пружинний" скрол за межі */
-}
-
-body {
+/* Флагманський фон сторінки */
+.page-bg-custom {
   background-image: url("../photo/3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  /* Найсучасніший спосіб 2026 */
-  height: 100dvh;
-  min-height: 100dvh;
-  max-height: 100dvh;
-
-  /* Додатково прибираємо будь-які відступи від safe-area */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
 }
 
-/* Якщо хочеш, щоб контент теж ігнорував safe-area (екстремальний варіант) */
-main,
-.card-container {
-  /* або твій головний контейнер */
-  height: 100dvh;
-  margin: 0;
-  padding: 0;
+/* Статус-бар */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-/* Контейнер, який обрізає текст і задає фон */
+/* Картка */
+.main-card {
+  margin: 60px 20px 0;
+  background-color: #d8d7c5;
+  border: 1px solid #aeae9a;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Бігуча стрічка */
 .marquee-viewport {
-  background-color: #704d1b; /* Точний колір як на скриншоті */
+  background-color: #704d1b;
   overflow: hidden;
   white-space: nowrap;
-  margin: 448px 24px 40px; /* Розтягуємо на всю ширину картки */
+  margin: 20px -20px; /* Вихід за межі внутрішніх відступів картки */
+  height: 30px;
   display: flex;
   align-items: center;
 }
 
-/* Стиль самого тексту */
 #running-line {
   display: inline-block;
   color: #ffffff;
-  font-family: "e-Ukraine", "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  text-transform: none; /* В оригіналі звичайний регістр */
-  /* padding-left: 100%; */
-  margin: 6px;
-
-  transform: translate3d(0, 0, 0); /* GPU-ускорення + стабілізація */
-  /* Анімація: 18 секунд для плавності */
-  animation: marquee 260s linear infinite;
+  will-change: transform;
+  animation: marquee 20s linear infinite; /* Золота середина швидкості */
 }
 
-/* Опис руху */
 @keyframes marquee {
   0% {
-    transform: translate(0, 0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translate(-100%, 0);
+    transform: translateX(-100%);
   }
+}
+
+/* Кнопка Плюс */
+.fab-button {
+  position: fixed;
+  bottom: 120px; /* Над нижньою навігацією */
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background-color: #ff8a00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Нижня навігація */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  z-index: 1000;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.nav-item.active {
+  opacity: 1;
 }

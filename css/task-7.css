@@ -59,7 +59,7 @@ main,
 
   transform: translate3d(0, 0, 0); /* GPU-ускорення + стабілізація */
   /* Анімація: 18 секунд для плавності */
-  animation: marquee 38s linear infinite;
+  animation: marquee 320s linear infinite;
 }
 
 /* Опис руху */

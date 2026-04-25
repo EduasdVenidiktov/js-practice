@@ -59,7 +59,7 @@ main,
 
   transform: translate3d(0, 0, 0); /* GPU-ускорення + стабілізація */
   /* Анімація: 18 секунд для плавності */
-  animation: marquee 260s linear infinite;
+  animation: marquee 420s linear infinite;
 }
 
 /* Опис руху */
@@ -85,4 +85,78 @@ a:focus {
   /* Додаткова перестраховка для деяких браузерів */
   background-color: transparent;
   opacity: 1;
+}
+
+/* Затемнення фону */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Основний фон трошки темніє */
+  z-index: 2000;
+  display: none; /* Приховано за замовчуванням */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Саме модальне вікно (Bottom Sheet) */
+.modal-sheet {
+  position: fixed;
+  bottom: -100%; /* Початкова позиція нижче екрану */
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 24px 24px 0 0;
+  padding: 16px 0 40px 0;
+  z-index: 2001;
+  transition: bottom 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Смужка зверху вікна */
+.modal-handle {
+  width: 40px;
+  height: 4px;
+  background: #000;
+  border-radius: 2px;
+  margin: 0 auto 24px auto;
+}
+
+/* Елементи меню */
+.modal-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  text-decoration: none;
+  color: #000;
+  font-family: sans-serif;
+  font-size: 18px;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.modal-item:active {
+  background-color: #f0f0f0;
+}
+
+.modal-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Класи для активації */
+.modal-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+.modal-sheet.active {
+  bottom: 0;
 }

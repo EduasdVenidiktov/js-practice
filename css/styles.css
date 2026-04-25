@@ -54,7 +54,6 @@ main,
   font-size: 14px;
   font-weight: 500;
   text-transform: none; /* В оригіналі звичайний регістр */
-  /* padding-left: 100%; */
   margin: 6px;
 
   transform: translate3d(0, 0, 0); /* GPU-ускорення + стабілізація */

@@ -124,3 +124,29 @@ function handleUpdate() {
   alert("Оновлення документа...");
   location.reload(); // Наприклад, просто перезавантажити сторінку
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("open-modal-btn");
+  const overlay = document.getElementById("modal-overlay");
+  const sheet = document.getElementById("modal-sheet");
+
+  openBtn.addEventListener("click", () => {
+    overlay.classList.add("active");
+    setTimeout(() => sheet.classList.add("active"), 10);
+  });
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      sheet.classList.remove("active");
+      setTimeout(() => overlay.classList.remove("active"), 300);
+    }
+  });
+});
+
+function handleDownload() {
+  alert("Завантаження PDF розпочато");
+}
+
+function handleUpdate() {
+  location.reload();
+}

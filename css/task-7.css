@@ -46,6 +46,7 @@ main,
   align-items: center;
   position: absolute;
   right: 24px; /* Відступ справа (тепер вони однакові) */
+  left: 24px;
 }
 
 /* Стиль самого тексту */

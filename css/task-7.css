@@ -49,6 +49,8 @@ main,
 /* Стиль самого тексту */
 #running-line {
   display: inline-block;
+  white-space: nowrap; /* Щоб текст не перестрибував на новий рядок */
+  will-change: transform; /* Підказує браузеру підготувати GPU */
   color: #ffffff;
   font-family: "e-Ukraine", "Inter", sans-serif;
   font-size: 14px;

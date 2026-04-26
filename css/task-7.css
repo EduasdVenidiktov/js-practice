@@ -45,8 +45,8 @@ main,
   display: flex;
   align-items: center;
   position: absolute;
-  right: 8px; /* Відступ справа (тепер вони однакові) */
-  left: 8px;
+  right: 0; /* Відступ справа (тепер вони однакові) */
+  left: 0;
 }
 
 /* Стиль самого тексту */

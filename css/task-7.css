@@ -106,6 +106,7 @@ a:focus {
   position: fixed;
   bottom: -100%;
   left: 0;
+  right: 0;
   width: 100%;
   background: #fff;
   /* Більш виражене заокруглення кутів */

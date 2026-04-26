@@ -92,3 +92,46 @@ function installPWA() {
 }
 
 document.getElementById("installBtn")?.addEventListener("click", installPWA);
+
+// ... (твій код Service Worker, годинника та стрічки залишається без змін) ...
+
+// 4. ЛОГІКА МОДАЛЬНОГО ВІКНА (Bottom Sheet)
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("open-modal-btn");
+  const overlay = document.getElementById("modal-overlay");
+  const sheet = document.getElementById("modal-sheet");
+
+  if (openBtn) {
+    openBtn.addEventListener("click", () => {
+      // 1. Спочатку робимо оверлей видимим у DOM
+      overlay.style.display = "block";
+
+      // 2. Через мікро-затримку запускаємо анімацію
+      setTimeout(() => {
+        overlay.classList.add("active");
+        sheet.classList.add("active");
+      }, 10);
+    });
+  }
+
+  // Закриття
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      sheet.classList.remove("active");
+      overlay.classList.remove("active");
+      setTimeout(() => {
+        overlay.style.display = "none";
+      }, 300); // чекаємо кінця анімації
+    }
+  });
+});
+
+// Робимо функції глобальними, щоб onclick працював у модулі
+window.handleDownload = function () {
+  alert("Завантаження PDF розпочато");
+};
+
+window.handleUpdate = function () {
+  alert("Документ оновлюється...");
+  location.reload();
+};

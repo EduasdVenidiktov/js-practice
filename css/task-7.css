@@ -56,12 +56,16 @@ main,
   font-size: 14px;
   font-weight: 500;
   text-transform: none; /* В оригіналі звичайний регістр */
-  /* padding-left: 100%; */
   margin: 6px;
 
   transform: translate3d(0, 0, 0); /* GPU-ускорення + стабілізація */
   /* Анімація: 18 секунд для плавності */
   animation: marquee 420s linear infinite;
+
+  /* ФІКС: Блокуємо будь-який рух пальцем по стрічці */
+  touch-action: none;
+  user-select: none; /* Забороняємо виділення тексту при випадковому затисканні */
+  -webkit-user-select: none;
 }
 
 /* Опис руху */

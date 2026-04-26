@@ -105,16 +105,14 @@ a:focus {
 .modal-sheet {
   position: fixed;
   bottom: -100%;
-  left: 0;
-  right: 0;
-  width: 100%;
+  left: 16px;
+  right: 16px;
+  width: auto;
   background: #fff;
   /* Більш виражене заокруглення кутів */
   border-radius: 28px;
   /* Додаємо відступи з боків, щоб текст не прилипав */
   padding: 12px 16px;
-  margin-left: 16px;
-  margin-right: 104px;
   margin-bottom: 48px;
 
   box-sizing: border-box;

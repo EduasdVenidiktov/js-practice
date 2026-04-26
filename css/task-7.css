@@ -63,7 +63,7 @@ main,
 
   transform: translate3d(0, 0, 0); /* GPU-ускорення + стабілізація */
   /* Анімація: 18 секунд для плавності */
-  animation: marquee 420s linear infinite;
+  animation: marquee 520s linear infinite;
 
   /* ФІКС: Блокуємо будь-який рух пальцем по стрічці */
   touch-action: none;
@@ -120,7 +120,8 @@ a:focus {
   /* Більш виражене заокруглення кутів */
   border-radius: 28px;
   /* Додаємо відступи з боків, щоб текст не прилипав */
-  padding: 12px 16px;
+  padding: 0px 16px 12px;
+
   margin-bottom: 48px;
 
   box-sizing: border-box;

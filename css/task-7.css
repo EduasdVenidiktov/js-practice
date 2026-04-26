@@ -120,8 +120,8 @@ a:focus {
   /* Більш виражене заокруглення кутів */
   border-radius: 14px;
   /* Додаємо відступи з боків, щоб текст не прилипав */
-  padding: 6px 16px;
-  margin-bottom: 48px;
+  padding: 8px 16px;
+  margin-bottom: 52px;
 
   box-sizing: border-box;
   z-index: 2001;
@@ -134,7 +134,7 @@ a:focus {
   height: 4px;
   background: #000;
   border-radius: 2px;
-  margin: 0 auto 8px auto;
+  margin: 6 auto 8px auto;
 }
 
 /* Елемент меню (кнопка-стрічка) */

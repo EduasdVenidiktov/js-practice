@@ -94,53 +94,68 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Фон трошки темніє */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 2000;
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-/* Біле вікно, що виїжджає знизу */
+/* Біле вікно Bottom Sheet */
 .modal-sheet {
   position: fixed;
   bottom: -100%;
   left: 0;
   width: 100%;
   background: #fff;
-  border-radius: 24px 24px 0 0;
-  padding: 12px 0 40px 0;
+  /* Більш виражене заокруглення кутів */
+  border-radius: 28px 28px 0 0;
+  /* Додаємо відступи з боків, щоб текст не прилипав */
+  padding: 12px 16px 40px 16px;
+  box-sizing: border-box;
   z-index: 2001;
   transition: bottom 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+/* Чорний індикатор зверху */
 .modal-handle {
-  width: 36px;
+  width: 40px;
   height: 4px;
   background: #000;
   border-radius: 2px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 24px auto;
 }
 
+/* Елемент меню (кнопка-стрічка) */
 .modal-item {
   display: flex;
   align-items: center;
-  padding: 16px 24px;
+  padding: 18px 8px; /* Вертикальні відступи між пунктами */
   gap: 16px;
   text-decoration: none;
   color: #000;
-  font-family: sans-serif;
-  font-size: 18px;
-  border-bottom: 1px solid #f0f0f0;
+  font-family: "Inter", sans-serif;
+  font-size: 19px; /* Трохи більший шрифт як на зразку */
+  font-weight: 400;
+  /* Прибираємо рамку, замість неї можна лишити легку лінію */
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .modal-item:last-child {
   border-bottom: none;
 }
 
+/* Стиль іконок */
 .modal-icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* Стан при натисканні (ефект кнопки) */
+.modal-item:active {
+  background-color: #f9f9f9;
+  border-radius: 12px;
 }
 
 /* Стани активації */

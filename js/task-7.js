@@ -93,20 +93,32 @@ function installPWA() {
 
 document.getElementById("installBtn")?.addEventListener("click", installPWA);
 
-// ... (твій код Service Worker, годинника та стрічки залишається без змін) ...
-
 // 4. ЛОГІКА МОДАЛЬНОГО ВІКНА (Bottom Sheet)
+
+// ... (твій попередній код залишається без змін) ...
+
 document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("open-modal-btn");
   const overlay = document.getElementById("modal-overlay");
   const sheet = document.getElementById("modal-sheet");
 
+  let startY = 0;
+  let currentY = 0;
+
+  // Функція закриття
+  const closeModal = () => {
+    sheet.style.transform = `translateY(100%)`; // Відлітає вниз
+    overlay.classList.remove("active");
+    sheet.classList.remove("active");
+    setTimeout(() => {
+      overlay.style.display = "none";
+      sheet.style.transform = ""; // Скидаємо стилі після закриття
+    }, 300);
+  };
+
   if (openBtn) {
     openBtn.addEventListener("click", () => {
-      // 1. Спочатку робимо оверлей видимим у DOM
       overlay.style.display = "block";
-
-      // 2. Через мікро-затримку запускаємо анімацію
       setTimeout(() => {
         overlay.classList.add("active");
         sheet.classList.add("active");
@@ -114,24 +126,80 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Закриття
-  overlay?.addEventListener("click", (e) => {
-    if (e.target === overlay) {
-      sheet.classList.remove("active");
-      overlay.classList.remove("active");
-      setTimeout(() => {
-        overlay.style.display = "none";
-      }, 300); // чекаємо кінця анімації
+  // Обробка свайпу вниз
+  sheet?.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+    sheet.style.transition = "none"; // Вимикаємо анімацію під час руху пальцем
+  });
+
+  sheet?.addEventListener("touchmove", (e) => {
+    currentY = e.touches[0].clientY;
+    const diff = currentY - startY;
+
+    if (diff > 0) {
+      // Рухаємо вікно за пальцем
+      sheet.style.transform = `translateY(${diff}px)`;
     }
+  });
+
+  sheet?.addEventListener("touchend", () => {
+    sheet.style.transition = "transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)";
+    const diff = currentY - startY;
+
+    if (diff > 100) {
+      // Якщо свайпнули вниз більше ніж на 100px — закриваємо
+      closeModal();
+    } else {
+      // Інакше повертаємо на місце
+      sheet.style.transform = "translateY(0)";
+    }
+    // Скидаємо змінні
+    startY = 0;
+    currentY = 0;
+  });
+
+  // Закриття по кліку на фон
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) closeModal();
   });
 });
 
-// Робимо функції глобальними, щоб onclick працював у модулі
-window.handleDownload = function () {
-  alert("Завантаження PDF розпочато");
-};
+// document.addEventListener("DOMContentLoaded", () => {
+//   const openBtn = document.getElementById("open-modal-btn");
+//   const overlay = document.getElementById("modal-overlay");
+//   const sheet = document.getElementById("modal-sheet");
 
-window.handleUpdate = function () {
-  alert("Документ оновлюється...");
-  location.reload();
-};
+//   if (openBtn) {
+//     openBtn.addEventListener("click", () => {
+//       // 1. Спочатку робимо оверлей видимим у DOM
+//       overlay.style.display = "block";
+
+//       // 2. Через мікро-затримку запускаємо анімацію
+//       setTimeout(() => {
+//         overlay.classList.add("active");
+//         sheet.classList.add("active");
+//       }, 10);
+//     });
+//   }
+
+//   // Закриття
+//   overlay?.addEventListener("click", (e) => {
+//     if (e.target === overlay) {
+//       sheet.classList.remove("active");
+//       overlay.classList.remove("active");
+//       setTimeout(() => {
+//         overlay.style.display = "none";
+//       }, 300); // чекаємо кінця анімації
+//     }
+//   });
+// });
+
+// // Робимо функції глобальними, щоб onclick працював у модулі
+// window.handleDownload = function () {
+//   alert("Завантаження PDF розпочато");
+// };
+
+// window.handleUpdate = function () {
+//   alert("Документ оновлюється...");
+//   location.reload();
+// };

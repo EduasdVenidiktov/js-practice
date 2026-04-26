@@ -44,6 +44,7 @@ main,
   margin: 448px 24px 40px; /* Розтягуємо на всю ширину картки */
   display: flex;
   align-items: center;
+  position: absolute;
 }
 
 /* Стиль самого тексту */

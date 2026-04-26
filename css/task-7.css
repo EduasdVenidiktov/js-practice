@@ -43,6 +43,8 @@ main,
   white-space: nowrap;
   margin: 448px 24px 40px; /* Розтягуємо на всю ширину картки */
   display: flex;
+  padding-bottom: 6px;
+  padding-top: 6px;
   align-items: center;
   position: absolute;
   right: 0; /* Відступ справа (тепер вони однакові) */
@@ -71,15 +73,6 @@ main,
   -webkit-user-select: none;
 }
 
-/* Опис руху */
-/* @keyframes marquee {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
-} */
 @keyframes marquee {
   0% {
     transform: translate3d(0, 0, 0);

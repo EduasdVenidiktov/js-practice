@@ -7,13 +7,13 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-self.addEventListener("install", () => {
-  self.skipWaiting();
-});
+// self.addEventListener("install", () => {
+//   self.skipWaiting();
+// });
 
-self.addEventListener("activate", () => {
-  self.clients.claim();
-});
+// self.addEventListener("activate", () => {
+//   self.clients.claim();
+// });
 
 // 1. ФУНКЦІЯ ГОДИННИКА (працює автономно)
 function updateClock() {
@@ -74,9 +74,9 @@ window.addEventListener("beforeinstallprompt", (e) => {
   // Запобігаємо показу стандартного промпту
   e.preventDefault();
   deferredPrompt = e;
-  console.log("Install prompt ready");
-
-  // Тут можна показати свою кнопку "Встановити додаток"
+  // ПОКАЗУЄМО КНОПКУ:
+  const btn = document.getElementById("installBtn");
+  if (btn) btn.style.display = "block";
 });
 
 function installPWA() {
@@ -92,3 +92,74 @@ function installPWA() {
 }
 
 document.getElementById("installBtn")?.addEventListener("click", installPWA);
+
+// 4. ЛОГІКА МОДАЛЬНОГО ВІКНА (Bottom Sheet)
+
+// ... (твій попередній код залишається без змін) ...
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("open-modal-btn");
+  const overlay = document.getElementById("modal-overlay");
+  const sheet = document.getElementById("modal-sheet");
+
+  let startY = 0;
+  let currentY = 0;
+
+  // Функція закриття
+  const closeModal = () => {
+    sheet.style.transform = `translateY(100%)`; // Відлітає вниз
+    overlay.classList.remove("active");
+    sheet.classList.remove("active");
+    setTimeout(() => {
+      overlay.style.display = "none";
+      sheet.style.transform = ""; // Скидаємо стилі після закриття
+    }, 300);
+  };
+
+  if (openBtn) {
+    openBtn.addEventListener("click", () => {
+      overlay.style.display = "block";
+      setTimeout(() => {
+        overlay.classList.add("active");
+        sheet.classList.add("active");
+      }, 10);
+    });
+  }
+
+  // Обробка свайпу вниз
+  sheet?.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+    sheet.style.transition = "none"; // Вимикаємо анімацію під час руху пальцем
+  });
+
+  sheet?.addEventListener("touchmove", (e) => {
+    currentY = e.touches[0].clientY;
+    const diff = currentY - startY;
+
+    if (diff > 0) {
+      // Рухаємо вікно за пальцем
+      sheet.style.transform = `translateY(${diff}px)`;
+    }
+  });
+
+  sheet?.addEventListener("touchend", () => {
+    sheet.style.transition = "transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)";
+    const diff = currentY - startY;
+
+    if (diff > 100) {
+      // Якщо свайпнули вниз більше ніж на 100px — закриваємо
+      closeModal();
+    } else {
+      // Інакше повертаємо на місце
+      sheet.style.transform = "translateY(0)";
+    }
+    // Скидаємо змінні
+    startY = 0;
+    currentY = 0;
+  });
+
+  // Закриття по кліку на фон
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) closeModal();
+  });
+});

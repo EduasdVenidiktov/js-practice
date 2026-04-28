@@ -23,24 +23,11 @@
 
   <body>
     <div class="refresh-window">
-      <!-- <a href="index.html">
-        <img
-          src="./Photo/back-icon.png"
-          alt="Назад"
-          style="
-            width: 32px;
-            height: 32px;
-            position: absolute;
-            top: 16px;
-            left: 16px;
-          "
-        />
-      </a> -->
       <a
-        href="/pages/page-alert.html"
-        style="position: fixed; top: 70px; left: 242px; z-index: 1000"
+        href="pages/page-alertV.html"
+        style="position: fixed; top: 12px; right: 22px; z-index: 1000"
       >
-        <img src="/photo/button-bell.png" alt="Сповіщення" />
+        <img src="photo/button-bell.png" alt="Сповіщення" />
       </a>
     </div>
 
@@ -51,13 +38,40 @@
       </p>
     </div>
 
-    <div class="plus-window">
-      <a
-        href="/pages/page-plus.html"
-        style="position: fixed; bottom: 210px; right: 36px; z-index: 1000"
-      >
-        <img src="/photo/plus.png" alt="Plus" />
-      </a>
+    <div
+      class="plus-window"
+      id="open-modal-btn"
+      style="
+        position: fixed;
+        bottom: 164px;
+        right: 32px;
+        z-index: 1000;
+        cursor: pointer;
+      "
+    >
+      <img src="photo/plus.png" alt="Plus" />
+    </div>
+
+    <div id="modal-overlay" class="modal-overlay">
+      <div id="modal-sheet" class="modal-sheet">
+        <div class="modal-handle"></div>
+        <div class="modal-menu">
+          <a href="pages/page-plusV.html" class="modal-item">
+            <img src="photo/info.png" alt="" class="modal-icon" />
+            <span>Переглянути документ</span>
+          </a>
+
+          <div class="modal-item" onclick="handleDownload()">
+            <img src="photo/pdf.png" alt="" class="modal-icon" />
+            <span>Завантажити PDF</span>
+          </div>
+
+          <div class="modal-item" onclick="handleUpdate()">
+            <img src="photo/refresh.png" alt="" class="modal-icon" />
+            <span>Оновити документ</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <button

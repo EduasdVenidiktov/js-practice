@@ -202,7 +202,7 @@ a:focus {
 .plus-icon {
   color: #000000; /* Чорний колір плюса */
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1;
   margin-top: -2px; /* Мікро-корекція для візуального центру */
 }

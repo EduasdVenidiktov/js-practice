@@ -181,8 +181,8 @@ a:focus {
 /* Кнопка плюс помаранчевая */
 .plus-button {
   /* Розміри та форма */
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
 
   /* Колір фону (помаранчевий з вашого скрина) */
@@ -209,8 +209,8 @@ a:focus {
 /* Стиль самого символу "+" */
 .plus-icon {
   color: #000000; /* Чорний колір плюса */
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 48px;
+  font-weight: 800;
   line-height: 1;
   margin-top: -2px; /* Мікро-корекція для візуального центру */
 }

@@ -181,8 +181,8 @@ a:focus {
 /* Кнопка плюс помаранчевая */
 .plus-button {
   /* Розміри та форма */
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 
   /* Колір фону (помаранчевий з вашого скрина) */
@@ -195,11 +195,6 @@ a:focus {
 
   /* Позиціонування (можна змінити на fixed, якщо треба в куток) */
   cursor: pointer;
-
-  /* Плавність при натисканні */
-  transition:
-    transform 0.1s ease,
-    background-color 0.2s ease;
 
   /* Прибираємо виділення тексту */
   user-select: none;

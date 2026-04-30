@@ -177,3 +177,40 @@ a:focus {
 .modal-sheet.active {
   bottom: 0;
 }
+
+/* Кнопка плюс помаранчевая */
+.plus-button {
+  /* Розміри та форма */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  /* Колір фону (помаранчевий з вашого скрина) */
+  background-color: #ff8a00;
+
+  /* Центрування плюса */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Позиціонування (можна змінити на fixed, якщо треба в куток) */
+  cursor: pointer;
+
+  /* Плавність при натисканні */
+  transition:
+    transform 0.1s ease,
+    background-color 0.2s ease;
+
+  /* Прибираємо виділення тексту */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Стиль самого символу "+" */
+.plus-icon {
+  color: #000000; /* Чорний колір плюса */
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: -2px; /* Мікро-корекція для візуального центру */
+}

@@ -193,9 +193,6 @@ a:focus {
   align-items: center;
   justify-content: center;
 
-  /* Позиціонування (можна змінити на fixed, якщо треба в куток) */
-  cursor: pointer;
-
   /* Прибираємо виділення тексту */
   user-select: none;
   -webkit-tap-highlight-color: transparent;

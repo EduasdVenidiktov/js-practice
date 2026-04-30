@@ -193,9 +193,11 @@ a:focus {
   align-items: center;
   justify-content: center;
 
-  /* Прибираємо виділення тексту */
+  /* ПРИБИРАЄМО ЕФЕКТИ НАТИСКАННЯ */
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; /* Прибирає синю рамку на Android/iOS */
+  outline: none; /* Прибирає контур фокусу */
+  pointer-events: auto; /* Дозволяє клік, але без візуальної зміни */
 }
 
 /* Стиль самого символу "+" */
@@ -205,4 +207,14 @@ a:focus {
   font-weight: 600;
   line-height: 1;
   margin-top: -2px; /* Мікро-корекція для візуального центру */
+
+  /* Запобігаємо будь-яким змінам всередині іконки */
+  pointer-events: none;
+
+  /* Явно забороняємо зміну фону при активному стані */
+  .plus-button:active,
+  .plus-button:focus {
+    background-color: #ff8a00 !important;
+    transform: none !important;
+  }
 }

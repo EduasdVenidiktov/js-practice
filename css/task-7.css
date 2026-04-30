@@ -193,11 +193,18 @@ a:focus {
   align-items: center;
   justify-content: center;
 
-  /* ПРИБИРАЄМО ЕФЕКТИ НАТИСКАННЯ */
+  /* Повне приглушення системних ефектів */
   user-select: none;
-  -webkit-tap-highlight-color: transparent; /* Прибирає синю рамку на Android/iOS */
-  outline: none; /* Прибирає контур фокусу */
-  pointer-events: auto; /* Дозволяє клік, але без візуальної зміни */
+  -webkit-user-select: none;
+  -webkit-touch-callout: none; /* Забороняє контекстне меню при затисканні */
+  -webkit-tap-highlight-color: transparent !important; /* Прибирає голубу підсвітку */
+  -webkit-tap-highlight-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ) !important; /* Дублюємо для надійності */
+  outline: none !important;
 }
 
 /* Стиль самого символу "+" */
@@ -211,10 +218,13 @@ a:focus {
   /* Запобігаємо будь-яким змінам всередині іконки */
   pointer-events: none;
 
-  /* Явно забороняємо зміну фону при активному стані */
-  .plus-button:active,
-  .plus-button:focus {
-    background-color: #ff8a00 !important;
-    transform: none !important;
+  //* СУВОРА ЗАБОРОНА БУДЬ-ЯКИХ ЗМІН (винесено окремо) */
+.plus-button:active,
+.plus-button:focus,
+.plus-button:hover {
+    background-color: #ff8a00 !important; /* Залишаємо той самий колір */
+    transform: none !important; /* Забороняємо рух */
+    outline: none !important;
+    box-shadow: none !important; /* Прибираємо можливу тінь */
   }
 }

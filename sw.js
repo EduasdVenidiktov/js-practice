@@ -1,4 +1,4 @@
-const CACHE_NAME = "js-practice-v2";
+const CACHE_NAME = "js-practice-v3";
 const urlsToCache = [
   "./", // Корінь (важливо для офлайн-доступу)
   "./index.html", // Головна сторіюза, над якою ви зараз працюєте
@@ -13,30 +13,39 @@ const urlsToCache = [
   "./css/task-6.css", // Стилі (маленькими літерами)
   "./css/task-7.css", // Стилі (маленькими літерами)
 
+  "./js/install.js",
   "./js/task-5.js", // Скрипти (маленькими літерами)
   "./js/task-6.js", // Скрипти (маленькими літерами)
   "./js/task-7.js", // Скрипти (маленькими літерами)
 
   "./pages/page-alert.html", // Підсторінка
-  "./pages/page-plus.html", // Підсторінка (папка з маленької літери!)
-
   "./pages/page-alert-5.html", // Підсторінка
-  "./pages/page-plus-7.html", // Підсторінка (папка з маленької літери!)
-
+  "./pages/page-alert-6.html", // Підсторінка
+  "./pages/page-alert-7.html", // Підсторінка
   "./pages/page-alertV.html", // Підсторінка
+
+  "./pages/page-plus.html", // Підсторінка (папка з маленької літери!)
+  "./pages/page-plus-5.html", // Підсторінка (папка з маленької літери!)
+  "./pages/page-plus-6.html", // Підсторінка (папка з маленької літери!)
+  "./pages/page-plus-7.html", // Підсторінка (папка з маленької літери!)
   "./pages/page-plusV.html", // Підсторінка (папка з маленької літери!)
+
+  "./pages/update-screen.html", // Підсторінка (папка з маленької літери!)
 
   "./photo/3.png", // Зображення (папка з маленької літери!)
   "./photo/4.png", // Зображення (папка з маленької літери!)
 
   "./photo/back-icon.png", // Зображення (папка з маленької літери!)
   "./photo/button-bell.png", // Зображення (папка з маленької літери!)
+  "./photo/info.png",
+  "./photo/pdf.png",
   "./photo/plus-window.png", // Зображення (папка з маленької літери!)
   "./photo/plus-windowV.png", // Зображення (папка з маленької літери!)
 
   "./photo/plus.png", // Зображення (папка з маленької літери!)
   "./photo/refresh-window.jpg", // Зображення (папка з маленької літери!)
   "./photo/swipe.png", // Зображення
+  "./photo/update-screen.jpg",
 
   "./icon-192.png", // Іконка для PWA
   "./icon-512.png", // Іконка для PWA

@@ -2,7 +2,7 @@
   "name": "Резерв +",
   "short_name": "Резерв +",
   "description": "Практика JavaScript з годинником та стрічкою оновлень",
-  "start_url": "./task-7.html",
+  "start_url": "index.html",
   "scope": ".",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],

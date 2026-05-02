@@ -25,20 +25,20 @@
   ],
 
   "shortcuts": [
-  {
-    "name": "Версія 5",
-    "url": "./task-5.html",
-    "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
-  },
-  {
-    "name": "Версія 6",
-    "url": "./task-6.html",
-    "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
-  }
-  {
-    "name": "Версія 7",
-    "url": "./task-7.html",
-    "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
-  }
-]
+    {
+      "name": "Версія 5",
+      "url": "./task-5.html",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Версія 6",
+      "url": "./task-6.html",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Версія 7",
+      "url": "./task-7.html",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+    }
+  ]
 }

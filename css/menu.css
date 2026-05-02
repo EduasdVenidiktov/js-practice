@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: #e3e2d5; /* Ваш фірмовий фон */
+  font-family: sans-serif;
+}
+
+.menu-container {
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.menu-title {
+  color: #704d1b;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.big-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background-color: #ff8a00; /* Помаранчевий як у кнопки Плюс */
+  color: #000;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.big-button.secondary {
+  background-color: #fff;
+  border: 2px solid #ff8a00;
+}
+
+.big-button:active {
+  transform: scale(0.95);
+}
+
+.version-label {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.version-desc {
+  font-size: 14px;
+  opacity: 0.8;
+}

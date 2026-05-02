@@ -1,4 +1,4 @@
-const CACHE_NAME = "js-practice-v3";
+const CACHE_NAME = "js-practice-v4";
 const urlsToCache = [
   "./", // Корінь (важливо для офлайн-доступу)
   "./index.html", // Головна сторіюза, над якою ви зараз працюєте

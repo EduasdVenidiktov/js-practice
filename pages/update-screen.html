@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Оновлення недоступне</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: #e3e2d5;
+      }
+
+      /* Робимо всю картинку клікабельною кнопкою назад */
+      .full-screen-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+      }
+
+      .bg-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Картинка впишеться в екран */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Клік у будь-якому місці екрана поверне користувача назад -->
+    <a href="../task-5.html" class="full-screen-link">
+      <img
+        src="../photo/update-screen.jpg"
+        class="bg-image"
+        alt="Оновлення недоступне"
+      />
+    </a>
+  </body>
+</html>

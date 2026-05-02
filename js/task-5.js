@@ -148,3 +148,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === overlay) closeModal();
   });
 });
+
+function handleUpdate() {
+  // Шлях має вести до вашого нового HTML-файлу з картинкою update-screen
+  // Якщо файл лежить у папці pages, то шлях: "pages/ім'я_файлу.html"
+  window.location.href = "/pages/update-screen.html";
+}
+
+// 1. Обробка переходу на сторінку оновлення
+const updateBtn = document.getElementById("update-doc-btn");
+
+if (updateBtn) {
+  updateBtn.addEventListener("click", () => {
+    console.log("Перехід на сторінку оновлення...");
+    // Вкажіть точну назву вашого файлу!
+    window.location.href = "/pages/update-screen.html";
+  });
+}
+
+// 2. Якщо ви все ж хочете залишити handleUpdate для виклику з інших місць
+window.handleUpdate = function () {
+  window.location.href = "/pages/update-screen.html";
+};

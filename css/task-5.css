@@ -228,3 +228,7 @@ a:focus {
     box-shadow: none !important; /* Прибираємо можливу тінь */
   }
 }
+.modal-item span,
+.modal-item img {
+  pointer-events: none; /* Текст і іконка не заважають кліку по батьківському div */
+}

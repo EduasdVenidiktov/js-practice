@@ -159,11 +159,17 @@ function handleUpdate() {
 const updateBtn = document.getElementById("update-doc-btn");
 
 if (updateBtn) {
-  updateBtn.addEventListener("click", () => {
-    console.log("Перехід на сторінку оновлення...");
-    // Вкажіть точну назву вашого файлу!
+  updateBtn.onclick = () => {
+    e.preventDefault();
+
     window.location.href = "pages/update-screen.html";
-  });
+  };
+  // updateBtn.addEventListener("click", () => {
+  //   console.log("Перехід на сторінку оновлення...");
+  //   e.preventDefault();
+  //   // Вкажіть точну назву вашого файлу!
+  //   window.location.href = "pages/update-screen.html";
+  // });
 }
 
 // 2. Якщо ви все ж хочете залишити handleUpdate для виклику з інших місць

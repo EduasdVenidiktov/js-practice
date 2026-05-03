@@ -210,7 +210,7 @@ a:focus {
 /* Стиль самого символу "+" */
 .plus-icon {
   color: #000000; /* Чорний колір плюса */
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 600;
   line-height: 1;
   margin-top: -2px; /* Мікро-корекція для візуального центру */
@@ -231,21 +231,4 @@ a:focus {
 .modal-item span,
 .modal-item img {
   pointer-events: none; /* Текст і іконка не заважають кліку по батьківському div */
-}
-
-/* Стиль кнопки як на скрині */
-.understand-btn {
-  position: absolute;
-  bottom: 40px; /* Відступ від низу */
-  width: 85%;
-  padding: 16px;
-  background-color: #ff8a00; /* Фірмовий помаранчевий */
-  color: #2c2c2c; /* Темний колір тексту */
-  border: none;
-  border-radius: 25px; /* Закруглена кнопка */
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
 }

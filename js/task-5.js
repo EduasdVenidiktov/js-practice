@@ -164,15 +164,4 @@ if (updateBtn) {
 
     window.location.href = "pages/update-screen.html";
   };
-  // updateBtn.addEventListener("click", () => {
-  //   console.log("Перехід на сторінку оновлення...");
-  //   e.preventDefault();
-  //   // Вкажіть точну назву вашого файлу!
-  //   window.location.href = "pages/update-screen.html";
-  // });
 }
-
-// 2. Якщо ви все ж хочете залишити handleUpdate для виклику з інших місць
-// window.handleUpdate = function () {
-//   window.location.href = "pages/update-screen.html";
-// };

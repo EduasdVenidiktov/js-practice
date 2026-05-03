@@ -30,6 +30,7 @@
         transform: translateY(0);
         will-change: transform;
         transition: transform 0.1s ease-out;
+        transform: translateY(100%); /* Початковий стан — сховано внизу */
       }
 
       .bg-image {
@@ -155,22 +156,45 @@
       }
 
       // ОБ'ЄДНАНА ФУНКЦІЯ ONLOAD
+      // window.onload = () => {
+      //   // 1. Повторення тексту
+      //   const line = document.getElementById("running-line");
+      //   if (line) {
+      //     // ВАЖЛИВО: Викликаємо функцію для отримання динамічного часу
+      //     const dynamicText = getFormattedOldDate();
+
+      //     // Повторюємо динамічний текст 40 разів
+      //     line.textContent = dynamicText.repeat(40);
+      //   }
+
+      //   // 2. Ініціалізація скролу
+      //   updateMinY();
+      //   container.style.transform = `translateY(0px)`;
+      // };
+
       window.onload = () => {
-        // 1. Повторення тексту
+        // 1. Повторення тексту (без змін)
         const line = document.getElementById("running-line");
         if (line) {
-          // ВАЖЛИВО: Викликаємо функцію для отримання динамічного часу
           const dynamicText = getFormattedOldDate();
-
-          // Повторюємо динамічний текст 40 разів
           line.textContent = dynamicText.repeat(40);
         }
 
-        // 2. Ініціалізація скролу
+        // 2. Ініціалізація скролу та запуск анімації появи
         updateMinY();
-        container.style.transform = `translateY(0px)`;
-      };
 
+        // Плавний виїзд вгору через JS
+        setTimeout(() => {
+          container.style.transition =
+            "transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)";
+          container.style.transform = `translateY(0px)`;
+
+          // Після завершення анімації повертаємо швидку реакцію для свайпів
+          setTimeout(() => {
+            container.style.transition = "transform 0.1s ease-out";
+          }, 600);
+        }, 100);
+      };
       document.addEventListener(
         "touchstart",
         (e) => {

@@ -41,12 +41,14 @@ main,
   background-color: #704d1b; /* Точний колір як на скриншоті */
   overflow: hidden;
   white-space: nowrap;
-  margin: 448px 24px 40px; /* Розтягуємо на всю ширину картки */
+  /* margin: 448px 24px 40px;  */
+  margin: 0;
   display: flex;
   align-items: center;
   position: absolute;
-  right: 0; /* Відступ справа (тепер вони однакові) */
-  left: 0;
+  right: 24; /* Відступ справа (тепер вони однакові) */
+  left: 24;
+  bottom: 240;
 }
 
 /* Стиль самого тексту */

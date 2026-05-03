@@ -36,6 +36,17 @@ main,
   padding: 0;
 }
 
+/* Додай або онови ці стилі */
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100dvh; /* Висота на весь екран */
+  pointer-events: none; /* Щоб контейнер не заважав клікам */
+}
+
 /* Контейнер, який обрізає текст і задає фон */
 .marquee-viewport {
   background-color: #704d1b; /* Точний колір як на скриншоті */

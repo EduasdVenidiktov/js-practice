@@ -148,8 +148,6 @@ a:focus {
   font-family: "Inter", sans-serif;
   font-size: 19px; /* Трохи більший шрифт як на зразку */
   font-weight: 400;
-  /* Прибираємо рамку, замість неї можна лишити легку лінію */
-  /* border-bottom: 1px solid #f2f2f2; */
 }
 
 .modal-item:last-child {

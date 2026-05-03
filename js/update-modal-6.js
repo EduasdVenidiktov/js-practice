@@ -19,7 +19,7 @@ async function loadAndShowModal() {
   try {
     hidePreviousMenu(); // Ховаємо нижнє меню перед показом модалки
 
-    const response = await fetch("pages/update-modal.html");
+    const response = await fetch("pages/update-modal-6.html");
     if (!response.ok) throw new Error("Помилка завантаження");
 
     const modalHtml = await response.text();

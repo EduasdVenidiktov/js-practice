@@ -18,16 +18,23 @@ function updateClock() {
   }
 }
 
-// 2. ФУНКЦІЯ ДАТИ ДЛЯ СТРІЧКИ (сьогодні мінус 1 день)
+// 2. ФУНКЦІЯ ДАТИ ДЛЯ СТРІЧКИ (сьогодні мінус 6 годин (1 день)
 function getFormattedOldDate() {
   const date = new Date();
-  date.setDate(date.getDate() - 1);
+  // date.setDate(date.getDate() - 1);
 
+  // Віднімаємо 6 годин від поточного часу
+  date.setHours(date.getHours() - 5);
   const day = String(date.getDate()).padStart(2, "0");
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const year = date.getFullYear();
 
-  return `Документ оновлено о 21:37 | ${day}.${month}.${year}`;
+  // ОБОВ'ЯЗКОВО: Отримуємо години та хвилини, щоб вони працювали в return
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+
+  // Тепер змінні hours та minutes існують і код спрацює
+  return `Документ оновлено о ${hours}:37 | ${day}.${month}.${year}`;
 }
 
 // 3. ЗАПУСК ТА ЛОГІКА СТРІЧКИ
@@ -141,3 +148,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === overlay) closeModal();
   });
 });
+
+function handleUpdate() {
+  // Шлях має вести до вашого нового HTML-файлу з картинкою update-screen
+  window.location.href = "pages/update-screen-6.html";
+}
+
+// 1. Обробка переходу на сторінку оновлення
+const updateBtn = document.getElementById("update-doc-btn");
+
+if (updateBtn) {
+  updateBtn.onclick = () => {
+    e.preventDefault();
+
+    window.location.href = "pages/update-screen-6.html";
+  };
+}

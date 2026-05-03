@@ -155,23 +155,6 @@
         return `Документ оновлено о ${hours}:37 | ${day}.${month}.${year} • `;
       }
 
-      // ОБ'ЄДНАНА ФУНКЦІЯ ONLOAD
-      // window.onload = () => {
-      //   // 1. Повторення тексту
-      //   const line = document.getElementById("running-line");
-      //   if (line) {
-      //     // ВАЖЛИВО: Викликаємо функцію для отримання динамічного часу
-      //     const dynamicText = getFormattedOldDate();
-
-      //     // Повторюємо динамічний текст 40 разів
-      //     line.textContent = dynamicText.repeat(40);
-      //   }
-
-      //   // 2. Ініціалізація скролу
-      //   updateMinY();
-      //   container.style.transform = `translateY(0px)`;
-      // };
-
       window.onload = () => {
         // 1. Повторення тексту (без змін)
         const line = document.getElementById("running-line");

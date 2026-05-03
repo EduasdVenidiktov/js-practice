@@ -24,7 +24,7 @@
   <body>
     <div class="refresh-window">
       <a
-        href="pages/page-alertV.html"
+        href="pages/page-alert-6.html"
         style="position: fixed; top: 12px; right: 22px; z-index: 1000"
       >
         <img src="photo/button-bell.png" alt="Сповіщення" />
@@ -43,70 +43,57 @@
       id="open-modal-btn"
       style="
         position: fixed;
-        bottom: 164px;
-        right: 32px;
+        bottom: 170px;
+        right: 41px;
         z-index: 1000;
         cursor: pointer;
       "
     >
-      <img src="photo/plus.png" alt="Plus" />
+      <div class="plus-button" id="open-modal-btn">
+        <span class="plus-icon">+</span>
+      </div>
     </div>
 
     <div id="modal-overlay" class="modal-overlay">
       <div id="modal-sheet" class="modal-sheet">
         <div class="modal-handle"></div>
         <div class="modal-menu">
-          <a href="pages/page-plusV.html" class="modal-item">
+          <a href="pages/page-plus-6.html" class="modal-item">
             <img src="photo/info.png" alt="" class="modal-icon" />
             <span>Переглянути документ</span>
           </a>
 
-          <div class="modal-item" onclick="handleDownload()">
+          <a href="" class="modal-item">
             <img src="photo/pdf.png" alt="" class="modal-icon" />
             <span>Завантажити PDF</span>
-          </div>
+          </a>
 
-          <div class="modal-item" onclick="handleUpdate()">
+          <a href="#" class="modal-item" id="update-doc-trigger">
             <img src="photo/refresh.png" alt="" class="modal-icon" />
             <span>Оновити документ</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>
-
-    <!-- <button
-      id="installBtn"
-      style="
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        padding: 12px 20px;
-        background: #e3e2d5;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-      "
-    >
-      Встановити додаток
-    </button> -->
 
     <button
       id="installBtn"
       style="
         display: none;
         position: fixed;
-        bottom: 20px;
-        left: 20px;
+        bottom: 360px;
+        left: 130px;
         z-index: 9999;
-        padding: 12px;
-        background: #00ffa2;
+        padding: 20px;
+        background: #ff000d;
         border: none;
         border-radius: 8px;
       "
     >
       Встановити додаток
     </button>
+
+    <script src="js/update-modal-6.js"></script>
 
     <script src="./js/install.js"></script>
 

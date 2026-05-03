@@ -37,6 +37,20 @@
         width: 100%;
         height: auto;
         z-index: 1;
+
+        /* Підключаємо анімацію */
+        animation: slideUp 0.5s ease-out forwards;
+      }
+      /* Опис самої анімації */
+      @keyframes slideUp {
+        from {
+          transform: translateY(100%); /* Повністю схована знизу */
+          opacity: 0; /* Можна додати прозорість для м'якості */
+        }
+        to {
+          transform: translateY(0); /* Стає на своє місце */
+          opacity: 1;
+        }
       }
 
       .marquee-viewport {

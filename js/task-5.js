@@ -173,6 +173,6 @@ if (updateBtn) {
 }
 
 // 2. Якщо ви все ж хочете залишити handleUpdate для виклику з інших місць
-window.handleUpdate = function () {
-  window.location.href = "pages/update-screen.html";
-};
+// window.handleUpdate = function () {
+//   window.location.href = "pages/update-screen.html";
+// };

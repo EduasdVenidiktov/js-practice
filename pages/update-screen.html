@@ -6,6 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
+    <link rel="stylesheet" href="../css/task-5.css" />
+
     <title>Оновлення недоступне</title>
     <style>
       body,
@@ -16,6 +18,7 @@
         width: 100%;
         overflow: hidden;
         background-color: #e3e2d5;
+        margin: 0;
       }
 
       /* Робимо всю картинку клікабельною кнопкою назад */
@@ -26,21 +29,71 @@
         text-decoration: none;
       }
 
+      /* Головний фікс: додаємо position: relative */
+      .update-container {
+        position: relative;
+        /* width: 100%; */
+        /* height: 100dvh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .bg-image {
         width: 100%;
         height: 100%;
         object-fit: contain; /* Картинка впишеться в екран */
       }
+
+      /* Дублюємо стиль кнопки тут для гарантії */
+      .understand-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        padding: 0;
+        background-color: #ff8a00 !important;
+        border-radius: 30px;
+        /* font-family: sans-serif; */
+        display: block;
+        z-index: 999; /* Поверх усього */
+      }
+
+      .btn-image {
+        /* Керуємо розміром картинки всередині */
+        width: 120px;
+
+        height: auto; /* Авто-висота, щоб не псувати пропорції */
+        display: block;
+        pointer-events: none; /* Щоб клік проходив на посилання */
+        /* ЦЕНТРУВАННЯ ПО ГОРИЗОНТАЛІ */
+        margin-left: auto;
+        margin-right: auto;
+
+        pointer-events: none;
+      }
     </style>
   </head>
   <body>
+    <div class="update-container">
+      <!-- Картинка-фон -->
+      <img
+        src="../photo/update-screen.jpg"
+        class="bg-image"
+        alt="Оновлення даних"
+      />
+
+      <!-- Реальна кнопка поверх картинки -->
+      <a href="../task-5.html" class="understand-btn">
+        <img src="../photo/understand.png" alt="Зрозуміло" class="btn-image" />
+      </a>
+    </div>
     <!-- Клік у будь-якому місці екрана поверне користувача назад -->
-    <a href="../task-5.html" class="full-screen-link">
+    <!-- <a href="../task-5.html" class="full-screen-link">
       <img
         src="../photo/update-screen.jpg"
         class="bg-image"
         alt="Оновлення недоступне"
       />
-    </a>
+    </a> -->
   </body>
 </html>

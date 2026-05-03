@@ -218,10 +218,10 @@ a:focus {
   /* Запобігаємо будь-яким змінам всередині іконки */
   pointer-events: none;
 
-  //* СУВОРА ЗАБОРОНА БУДЬ-ЯКИХ ЗМІН (винесено окремо) */
-.plus-button:active,
-.plus-button:focus,
-.plus-button:hover {
+  /* СУВОРА ЗАБОРОНА БУДЬ-ЯКИХ ЗМІН (винесено окремо) */
+  .plus-button:active,
+  .plus-button:focus,
+  .plus-button:hover {
     background-color: #ff8a00 !important; /* Залишаємо той самий колір */
     transform: none !important; /* Забороняємо рух */
     outline: none !important;
@@ -231,4 +231,21 @@ a:focus {
 .modal-item span,
 .modal-item img {
   pointer-events: none; /* Текст і іконка не заважають кліку по батьківському div */
+}
+
+/* Стиль кнопки як на скрині */
+.understand-btn {
+  position: absolute;
+  bottom: 40px; /* Відступ від низу */
+  width: 85%;
+  padding: 16px;
+  background-color: #ff8a00; /* Фірмовий помаранчевий */
+  color: #2c2c2c; /* Темний колір тексту */
+  border: none;
+  border-radius: 25px; /* Закруглена кнопка */
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }

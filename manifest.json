@@ -6,7 +6,7 @@
   "scope": ".",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
-  "background_color": "#e3e2d5",
+  "background_color": "#000000",
   "theme_color": "#e3e2d5",
   "orientation": "portrait-primary",
   "icons": [
@@ -33,16 +33,6 @@
     {
       "name": "Версія 5",
       "url": "./task-5.html",
-      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Версія 6",
-      "url": "./task-6.html",
-      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Версія 7",
-      "url": "./task-7.html",
       "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
     }
   ]

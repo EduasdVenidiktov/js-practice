@@ -6,7 +6,7 @@
   "scope": ".",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
-  "background_color": "./icon-black.png",
+  "background_color": "#000",
   "theme_color": "#e3e2d5",
   "orientation": "portrait-primary",
   "icons": [
@@ -18,7 +18,7 @@
     },
     {
       "src": "./icon-black.png",
-      "sizes": "1000x2040",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
